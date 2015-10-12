@@ -1,0 +1,45 @@
+#reg{
+	width:300px;
+	border: 1px #3a6587 solid;
+}
+h1 {
+	text-align:center;
+	font-size:16px;
+	background-color:#3a6587;
+	line-height:35px;
+	color:#FFF;
+}
+#reg table {
+	background-color:#d4e8f7;
+}
+
+#reg table td {
+	height:28px;
+	font:12px "宋体";
+}
+
+.leftTitle {
+	width:80px;
+	text-align:right;
+}
+.textInput {
+	border:1px #7b7b7b solid;
+	width:130px;
+	height:17px;
+}
+
+.btn {
+	/*background:url(../image/btnRegist.jpg) 0px 0px no-repeat;*/
+	/*width:10px;
+	height:32px;
+	border:1px;*/
+	/*cursor:pointer;*/
+	
+    color: #8c96a0;
+    text-shadow: 1px 1px 1px #fff;
+    border: 1px solid #dce1e6;
+    box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+    background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: linear-gradient(top,#f2f3f7,#e4e8ec);
+}
