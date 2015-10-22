@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=5; IE=8">
-	<link rel="stylesheet" href="tools/bootstrap/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=5; IE=8">
+    <link rel="stylesheet" href="tools/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="tools/material/angular-material.min.css"/>
-	<title>教育搜索</title>
+
+    <title>教育搜索</title>
 </head>
-<body>
-	<h1>模板</h1>
+<body ms-controller="test">
+    <div  ms-include-src="'templates/widget/nav.html'"></div>
+    <h1>模板</h1>
 </body>
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="tools/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="tools/material/angular-material.min.js"></script>
 <script type="text/javascript" src="tools/masonry/angular-masonry.js"></script>
+<script type="text/javascript" src="tools/avalon/avalon.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script>
+    avalon.define({
+         $id: "test",
+         xxx: "引入内部模板"
+      })
+</script>
 </html>
