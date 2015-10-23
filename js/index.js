@@ -25,7 +25,11 @@ $(document).ready(function(){
                 console.log(error);
             }
         });
+<<<<<<< HEAD
+    };
+=======
     });
+>>>>>>> 97b42eddcf2b5ef920ef5786432d77b2b105f405
     //简单登陆
     $(document).delegate("#login_submit",'click',function(){
         var data={};
