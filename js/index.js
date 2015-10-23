@@ -54,6 +54,7 @@ $(document).ready(function(){
                 success:function(data){
                     that.parent().append(JSON.stringify(data));
                     that.prev().click();
+                    alert(data);
                 },
                 error:function(error){
                     console.log(error);
