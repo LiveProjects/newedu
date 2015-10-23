@@ -11,24 +11,20 @@
 </head>
 <body ms-controller="test">
     <div  ms-include-src="'templates/widget/nav.html'"></div>
-    <div class="container well" style="margin-top: 100px;">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1" style="position: relative;">
-                <input type="text" class="form-control" placeholder="搜索资源"><button id="search_submit" class="btn btn-info" style=" -webkit-border-radius: 0 6px 6px 0;-moz-border-radius: 0 6px 6px 0;border-radius: 0 6px 6px 0;position: absolute;top: 0;right: 0;">确定</button>
-            </div>
-        </div>
-    </div>
+
+    <div  ms-include-src="'templates/tools/search_form.html'"></div>
+    <div  ms-include-src="'templates/tools/send_email.html'"></div>
+
+    <div  ms-include-src="'templates/widget/footer.html'"></div>
 </body>
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="tools/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="tools/material/angular-material.min.js"></script>
 <script type="text/javascript" src="tools/masonry/angular-masonry.js"></script>
 <script type="text/javascript" src="tools/avalon/avalon.js"></script>
+<script type="text/javascript" src="tools/avalon/mmHistory.js"></script>
+<script type="text/javascript" src="tools/avalon/mmRouter.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<script>
-    avalon.define({
-         $id: "test",
-         xxx: "引入内部模板"
-      })
-</script>
+
+<script type="text/javascript" src="js/router.js"></script>
 </html>

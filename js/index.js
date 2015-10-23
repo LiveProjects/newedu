@@ -1,3 +1,8 @@
+avalon.define({
+    $id: "test",
+    xxx: "引入内部模板"
+});
+
 $(document).ready(function(){
     var gl={
         search_submit:document.getElementById("search_submit"),
@@ -6,7 +11,7 @@ $(document).ready(function(){
         passWord:document.getElementById("passWord")
     };
     //搜索
-    gl.search_submit.onclick=function(){
+    $("#search_submit").on('click',function(){
         var that=$(this);
         $.ajax({
             url:'php/common/login.php',
@@ -20,7 +25,11 @@ $(document).ready(function(){
                 console.log(error);
             }
         });
+<<<<<<< HEAD
     };
+=======
+    });
+>>>>>>> 97b42eddcf2b5ef920ef5786432d77b2b105f405
     //简单登陆
     $(document).delegate("#login_submit",'click',function(){
         var data={};
@@ -49,6 +58,7 @@ $(document).ready(function(){
                 success:function(data){
                     that.parent().append(JSON.stringify(data));
                     that.prev().click();
+                    alert(data);
                 },
                 error:function(error){
                     console.log(error);

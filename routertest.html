@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>路由系统</title>
+    </head>
+    <body >
+        <div ms-controller="test">
+            <table width="100%" height="300">
+                <tr>
+                    <td width="250">
+                        <ul>
+                            <li><a href="#!/aaa">aaa</a></li>
+                            <li><a href="#!/bbb?uu=3445345&were=4324">bbb</a></li>
+                            <li><a href="#!/ccc/etretr">ccc</a></li>
+                            <li><a href="#!/ddd/2014-09-19">ddd</a></li>
+                            <li><a href="#!/eee/2222">eee</a></li>
+                            <li><a href="#!/fff?a=1&nn=4&dfg=676">fff</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div style="color:red">this.path: {{currPath}}</div>
+                        <div style="color:blue">arguments: {{args}}</div>
+                        <fieldset>
+                            <legend>this.params</legend>
+                            <ol>
+                                <li ms-repeat="params"> {{$key}}: {{$val}}</li>
+                            </ol>
+                        </fieldset>
+                        <fieldset>
+                            <legend>this.query</legend>
+                            <ol>
+                                <li ms-repeat="query"> {{$key}}: {{$val}}</li>
+                            </ol>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+            <div style="height: 600px;width:1px;">
+
+            </div>
+            <p id="eee">会定位到这里</p>
+        </div>
+
+    </body>
+<script src="tools/avalon/avalon.js"></script>
+<script src="js/router.js"></script>
+</html>
