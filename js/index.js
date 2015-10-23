@@ -21,7 +21,7 @@ $(document).ready(function(){
             }
         });
     };
-    //登陆
+    //简单登陆
     $(document).delegate("#login_submit",'click',function(){
         var data={};
         data.username=$("#userName").val();
