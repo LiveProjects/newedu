@@ -1,25 +1,26 @@
 <?php
-// session_start ();
-// require_once '../../../common/dbaccess.php';
+session_start ();
+require_once '../../php/db_mysql/dbaccess.php';
+// error_reporting(0);
+$db = new DB ();
 
-// $db = new DB ();
+$username = 'lio';
+$password = 123;
 
-// $username = $_GET['username'];
-// $password = $_GET['password'];
+$sql = "select * from login where username = '{$username}' and password = '{$password}'";
+// echo $sql;die;
+$result= $db->getrow ( $sql );
 
-// $sql = "select * from t_hs_employee where FNumber = '{$username}' and FPwd = '{$password}'";
-// //echo $sql;die;
-// $result= $db->getrow ( $sql );
-// $status = 0;
-// if(empty($result)){
-//    $status = -1;
-//    $arr['status'] = $status;
-// }else{
-//    $status = 1;
-//    $arr['status'] = $status;
-//    $arr['username']=$result['FName'];
-//    $_SESSION['user']['number'] = $result['FNumber'];
-//    $_SESSION['user']['name'] = $result['FName'];
+$status = 0;
+if(empty($result)){
+   $status = -1;
+   $arr['status'] = $status;
+}else{
+   $status = 1;
+   $arr['status'] = $status;
+   $arr['username']=$result['username'];
+   $_SESSION['user']['number'] = $result['password'];
+//    $_SESSION['user']['name'] = $result['username'];
 //    $_SESSION['user']['companyID'] = $result['FCompanyID'];
 //    $_SESSION['user']['sectionID'] = $result['FSectionID'];
    
@@ -33,14 +34,8 @@
    
 //    }
 
-// }
-
-$arr;
-$arr['username']='lio';
-$arr['password']=123;
-
-echo json_encode ( $arr );
-
+}
+echo $status;
 
 
 ?>
