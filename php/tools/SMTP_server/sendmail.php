@@ -13,13 +13,13 @@
             //SMTP端口号?
             $smtpserverport = 25;
             //SMTP发邮件的邮箱
-            $smtpusermail = "cqc@163.com";
+            $smtpusermail = "laobaoshijia@163.com";
             //发给谁
             $smtpemailto = $_POST['toemail'];
             //SMTP用户名，不加@163.com
-            $smtpuser = "cqc";
+            $smtpuser = "laobaoshijia";
             //SMTP用户密码
-            $smtppass = "wtf";
+            $smtppass = "qwe123";
             //主题
             $mailtitle = $_POST['topic'];
             //构建内容
