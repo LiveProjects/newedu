@@ -1,5 +1,6 @@
+
 window.onload=function(){
-    alert(13);
+
     var $svg = $(".sidebar"),
         $demo = $("#demo"),
         $path = $(".s-path"),
@@ -215,7 +216,6 @@ window.onload=function(){
         }, sContTrans);
     });
     $(window).delegate("resize", function() {
-        alert(123);
         demoTop = $demo.offset().top;
         demoLeft = $demo.offset().left;
     });
