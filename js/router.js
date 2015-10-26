@@ -42,7 +42,7 @@ window.onload=function(){
         avalon.router.get("/eee/{count:\\d{4}}/", callback);
         avalon.router.get("/fff", callback);
 
-        avalon.router.get("/register",go_reg_page);
+        avalon.router.get("/templates/tools/register",gopage);
         avalon.router.get("/index",gopage);
         avalon.router.get("/templates/tools/showDetail",gopage);
         avalon.history.start({

@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#register_main ul{
+    overflow: hidden;
+}
+#register_main ul li{
+    list-style: none;
+}
+#register_main ul li:last-child{
+    margin-top: 10px;
+    padding-right: 10px;
+}
+#register_main ul li:last-child button{
+    margin-left: 8px;
+}
