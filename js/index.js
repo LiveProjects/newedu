@@ -1,8 +1,3 @@
-avalon.define({
-    $id: "test",
-    xxx: "引入内部模板"
-});
-
 $(document).ready(function(){
     var gl={
         search_submit:document.getElementById("search_submit"),
