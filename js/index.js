@@ -59,4 +59,52 @@ $(document).ready(function(){
             alert("please check null");
         }
     });
+
+    //空值检测
+    function null_value(array){
+        $.each(array,function(index,item,arr){
+            if($(this).val()==""){
+                alert("有空项");
+                return false;
+            }
+        });
+        return true;
+    };
+    //数封装json
+    function make_json(array){
+        var new_json={};
+        if(Object.prototype.toString.call(array[0])=='[object HTMLInputElement]'){
+            $.each(function(item,index,arr){
+                new_json[item]=item;
+            });
+            return new_json;
+        }
+    };
+
+    //简单注册
+    $("#main").delegate('#register_button_true','click',function(){
+        var register_main_inputs= $("#register_main").find("input");
+        alert(null_value(register_main_inputs));
+
+        var val='';
+        if(null_value(register_main_inputs)){
+            $.ajax({
+                url:'',
+                dataType:'get',
+                Type:'json',
+                data:{
+                    'value':val
+                },
+                beforeSend:function(){
+                    alert(val);
+                },
+                success:function(data){
+                    alert(data);
+                },
+                error:function(error){
+                    console.log(error);
+                }
+            })
+        }
+    });
 });
