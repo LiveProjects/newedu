@@ -1,4 +1,13 @@
-$(document).ready(function(){
+avalon.ready(function(){
+    var vm =avalon.define({
+        $id: "register",
+        w: '请输入用户名',
+        h: 100,
+        click: function() {
+            vm.w = parseFloat(vm.w) + 10;
+            vm.h = parseFloat(vm.h) + 10;
+        }
+    });
     var gl={
         search_submit:document.getElementById("search_submit"),
         login_submit:document.getElementById("login_submit"),
@@ -84,19 +93,18 @@ $(document).ready(function(){
     //简单注册
     $("#main").delegate('#register_button_true','click',function(){
         var register_main_inputs= $("#register_main").find("input");
-        alert(null_value(register_main_inputs));
-
         var val='';
         if(null_value(register_main_inputs)){
             $.ajax({
-                url:'',
+                url:'php/common/register.php',
                 dataType:'get',
-                Type:'json',
+                Type:'text',
                 data:{
-                    'value':val
+                    'username':$("#username").val(),
+                    'password':$("#password").val()
                 },
                 beforeSend:function(){
-                    alert(val);
+                    //alert(123);
                 },
                 success:function(data){
                     alert(data);
@@ -107,4 +115,5 @@ $(document).ready(function(){
             })
         }
     });
+    avalon.scan();
 });

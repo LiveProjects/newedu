@@ -12,7 +12,7 @@ window.onload=function(){
             pageUrl:"templates/tools/search_form.html",
             lio:123,
             xxx: "引入内部模板"
-        })
+        });
         function callback() {
             model.currPath = this.path
             var params = this.params
@@ -25,7 +25,6 @@ window.onload=function(){
         };
         function go_reg_page() {
             alert(123);
-
         };
         function gopage(){
             if(this.path==="/index"){
@@ -43,6 +42,7 @@ window.onload=function(){
         avalon.router.get("/fff", callback);
 
         avalon.router.get("/templates/tools/register",gopage);
+        avalon.router.get("/templates/tools/searchBlock",gopage);
         avalon.router.get("/index",gopage);
         avalon.router.get("/templates/tools/showDetail",gopage);
         avalon.history.start({
