@@ -14,11 +14,6 @@ avalon.ready(function() {
         height:window.innerHeight,
         'searchBlock':document.getElementById("searchBlock")
     });
-    $("#searchBlock").style.height=vm.height+"px";
-
-
-
-
 
     avalon.scan();
 
