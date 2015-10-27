@@ -11,7 +11,9 @@
   background-color: pink;
 }
 
-#container{
+#main_search,#container{
   height:100%;
-  width: 100%;
+}
+#main_search{
+  background-color: #00B570;
 }
