@@ -43,6 +43,7 @@ window.onload=function(){
 
         avalon.router.get("/templates/tools/register",gopage);
         avalon.router.get("/templates/tools/searchBlock",gopage);
+        avalon.router.get("/templates/tools/chatRoom",gopage);
         avalon.router.get("/index",gopage);
         avalon.router.get("/templates/tools/showDetail",gopage);
         avalon.history.start({

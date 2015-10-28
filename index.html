@@ -8,16 +8,12 @@
     <link rel="stylesheet" href="tools/material/angular-material.min.css"/>
     <link rel="stylesheet" href="css/tools/search_block/search_block.css"/>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/widget/chatRoom/chatRoom_default.css"/>
-    <link rel="stylesheet" href="css/widget/chatRoom/chatRoom_normalize.css"/>
-    <link rel="stylesheet" href="css/widget/chatRoom/chatRoom_styles.css"/>
-    <link rel="stylesheet" href="css/widget/chatRoom/online.css"/>
+    <link rel="stylesheet" href="css/tools/chatRoom/chatRoom.css">
     <title>教育搜索</title>
 </head>
 <body ms-controller="test">
     <div ms-include-src="'templates/widget/nav.html'"></div>
     <div id="main" ms-include-src="pageUrl"></div>
-    <!--<div  ms-include-src="'templates/tools/chatRoom.html'"></div>-->
     <!--<div ms-include-src="'templates/tools/searchBlock.html'"></div>-->
     <!--<div  ms-include-src="'templates/widget/footer.html'"></div>-->
     <div class="container" style="width: 100%;">
@@ -26,10 +22,7 @@
             <div id="container" class="col-lg-7"></div>
         </div>
     </div>
-    <div  ms-include-src="'templates/tools/chatRoom.html'"></div>
-
 </body>
-
 
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="tools/bootstrap/js/bootstrap.js"></script>
@@ -43,6 +36,5 @@
 <script type="text/javascript" src="js/router.js"></script>
 <script type="text/javascript" src="js/bd_map.js" async></script>
 <script type="text/javascript" src="js/searchBlock.js"></script>
-<script type="text/javascript" src="js/widget/chatRoom/main.js"></script>
-<script type="text/javascript" src="js/widget/chatRoom/stopExecutionOnTimeout.js"></script>
+<script type="text/javascript" src="js/widget/chatRoom/chatRoom.js"></script>
 </html>
