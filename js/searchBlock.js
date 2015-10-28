@@ -10,13 +10,17 @@ avalon.ready(function() {
             vm.w = parseFloat(vm.w) + 10;
             vm.h = parseFloat(vm.h) + 10;
         },
-        width:window.innerWidth,
-        height:window.innerHeight,
-        'searchBlock':document.getElementById("searchBlock")
     });
-
     avalon.scan();
 
-
+    var condition = avalon.define({
+        $id:"condition",
+        arr:['距离','月费用','职业','性别','年级','时间'],
+        search_submit:function(){
+            var em=$(this);
+            alert(em.text());
+        }
+    });
+    avalon.scan();
 
 });

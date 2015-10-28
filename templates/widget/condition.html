@@ -1,0 +1,14 @@
+<div class="container" ms-controller="condition" style="width: 100%;">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item" ms-repeat="arr">
+                <label for="">{{el}}</label>
+                <input type="text" class="form-control">
+            </li>
+        </ul>
+        <div style="display: inline-block;" class="pull-right">
+            <button class="btn btn-success" ms-click-1="search_submit">搜索</button>
+            <button class="label label-danger" ms-click-1="search_submit">其他</button>
+        </div>
+    </div>
+</div>
