@@ -2,3 +2,25 @@
     height: 400px;
     background-color: #1d7db1;
 }
+
+#friend_list,#chatDetail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    background-color: white;
+}
+#send_control{
+    height: 40px;
+    position: relative;
+    background-color: black;
+}
+#send_control>button{
+    height: 100%;
+    position: absolute;
+    right: 0;top: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
