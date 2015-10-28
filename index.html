@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="tools/material/angular-material.min.css"/>
     <link rel="stylesheet" href="css/tools/search_block/search_block.css"/>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/widget/chatRoom/chatRoom_default.css"/>
+    <link rel="stylesheet" href="css/widget/chatRoom/chatRoom_normalize.css"/>
+    <link rel="stylesheet" href="css/widget/chatRoom/chatRoom_styles.css"/>
+    <link rel="stylesheet" href="css/widget/chatRoom/online.css"/>
     <title>教育搜索</title>
 </head>
 <body ms-controller="test">
@@ -22,6 +26,7 @@
             <div id="container" class="col-lg-7"></div>
         </div>
     </div>
+    <div  ms-include-src="'templates/tools/chatRoom.html'"></div>
 
 </body>
 
@@ -38,4 +43,6 @@
 <script type="text/javascript" src="js/router.js"></script>
 <script type="text/javascript" src="js/bd_map.js" async></script>
 <script type="text/javascript" src="js/searchBlock.js"></script>
+<script type="text/javascript" src="js/widget/chatRoom/main.js"></script>
+<script type="text/javascript" src="js/widget/chatRoom/stopExecutionOnTimeout.js"></script>
 </html>
