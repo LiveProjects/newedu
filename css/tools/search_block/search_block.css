@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#search {
+  height: 300px;
+  background-color: #39f;
+}
+#bd_map {
+  height: 300px;
+  background-color: pink;
+}
+
+#main_search,#container{
+  height:100%;
+}
+#main_search{
+  background-color: #c0c0c0;
+}
