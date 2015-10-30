@@ -1,0 +1,28 @@
+<div class="container" ms-controller="TaskBoard">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="list-group" ms-click-1="exchangePage">
+              <a href="#" class="list-group-item active">
+                Task List
+              </a>
+              <a href="#" class="list-group-item" ms-repeat="tasklist">{{el}}</a>
+            </div>
+        </div>
+        <!--<div ms-include-src="pageurl"></div>-->
+        <div class="col-lg-9" style="background-color: #00B570; padding-top: 10px;">
+            <ul>
+                <li ms-repeat="progressList" style="list-style: none; display: none;">
+                    <label>任务进度</label>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" ms-css-width="{{el}}%">
+                        <span class="sr-only">45% Complete</span>
+                      </div>
+                    </div>
+                    <div class="well">
+                        introduce
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
