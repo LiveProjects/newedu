@@ -18,6 +18,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-8" id="show_message">信息查看</div>
+        <div class="col-lg-8 list-group" id="show_message">
+            <ul class="list-group">
+                <li class="list-group-item" ms-repeat="articleList">
+                    <h6>{{el['title']}}</h6><span>{{el['read_num']}}</span>
+                    <p>{{el['content']|html}}</p>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

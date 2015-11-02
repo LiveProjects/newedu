@@ -63,6 +63,14 @@ class DB {
 		$row = mysql_fetch_array ( $this->result, MYSQL_ASSOC );
 		return $row;
 	}
+	
+	public function get_num_row($sql) {
+		$row = array ();
+		$this->query ( $sql );
+		if($this->result != null)
+		   $row = mysql_fetch_array ( $this->result, MYSQL_NUM );
+		return $row;
+	}
 	public function insert($table, $array) {
 		$keys = join ( ",", array_keys ( $array ) ); // 获取传过来的键名
 		$vals = "'" . join ( "','", array_values ( $array ) ) . "'"; // 获取传过来的值
@@ -79,17 +87,13 @@ class DB {
 			
 		}
 	}
+	
+	public function db_close(){
+		if($result)
+		  mysql_free_result($result);
+		mysql_close();
+		
+		
+	}
 }	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	

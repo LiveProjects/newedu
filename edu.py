@@ -7,7 +7,7 @@ db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="", db="newedu",port=
 cursor = db.cursor()
  
 page = 1
-for page in range(1,400):
+for page in range(2000,3000):
     url = 'http://www.jy135.com/jiaoyu/%d.html' % page
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
     headers = { 'User-Agent' : user_agent }
