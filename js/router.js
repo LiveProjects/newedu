@@ -40,7 +40,7 @@ window.onload=function(){
         avalon.router.get("/ddd/{time:date}/", callback);
         avalon.router.get("/eee/{count:\\d{4}}/", callback);
         avalon.router.get("/fff", callback);
-
+        avalon.router.get("/templates/tools/showSources",gopage);
         avalon.router.get("/templates/tools/register",gopage);
         avalon.router.get("/templates/tools/article_detail",gopage);
         avalon.router.get("/templates/tools/searchBlock",gopage);
