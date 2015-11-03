@@ -8,12 +8,25 @@ db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="", db="newedu",port=
 cursor = db.cursor()
  
 page = 1
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 for page in range(1,1000):
     print 1
     url = 'http://www.jy135.com/jiaoyu/%d.html' % page
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
     headers = { 'User-Agent' : user_agent }
+=======
+
+for page in range(1,12):
+>>>>>>> Stashed changes
+=======
+
+for page in range(1,12):
+>>>>>>> Stashed changes
     try:
+        url = 'http://www.jy135.com/jiaoyu/%d.html' % page
+        user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+        headers = { 'User-Agent' : user_agent }
         request = urllib2.Request(url,headers = headers)
         response = urllib2.urlopen(request)
         content = response.read()
@@ -22,8 +35,14 @@ for page in range(1,1000):
         items = re.findall(pattern,content)
         sql = "insert into article_list(title,read_num,content) values(%s,%s,%s);"
         for item in items:
+<<<<<<< Updated upstream
             param = (item[0],item[1],item[2]) 
             cursor.execute(sql,param)
+=======
+            print item[0]
+
+            print item[1]
+>>>>>>> Stashed changes
             print item[2]
     except urllib2.URLError, e:
         if hasattr(e,"code"):
