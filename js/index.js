@@ -107,6 +107,8 @@ avalon.ready(function(){
                     //alert(123);
                 },
                 success:function(data){
+
+                    avalon.scan();
                     alert(data);
                 },
                 error:function(error){

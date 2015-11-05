@@ -23,9 +23,6 @@ window.onload=function(){
             model.args = "[" + [].slice.call(arguments).join(",") + "]"
             model.query = this.query
         };
-        function go_reg_page() {
-            alert(123);
-        };
         function gopage(){
             if(this.path==="/index"){
                 model.pageUrl="templates/tools/search_form.html"; //如果url后缀变成"#!/index"，则pageUrl为“mine.html”
@@ -33,6 +30,7 @@ window.onload=function(){
                 var path_tail = this.path.replace(/\//, ""); //去掉this.path值的第一个斜杠
                 model.pageUrl = path_tail + ".html";  //动态修改pageUrl属性值
             }
+            avalon.scan();
         }
         avalon.router.get("/aaa/", callback);
         avalon.router.get("/bbb", callback);
