@@ -31,6 +31,8 @@ window.onload=function(){
                 model.pageUrl = path_tail + ".html";  //动态修改pageUrl属性值
             }
             avalon.scan();
+            var ob = document.getElementById('test');
+
         }
         avalon.router.get("/aaa/", callback);
         avalon.router.get("/bbb", callback);
@@ -39,6 +41,7 @@ window.onload=function(){
         avalon.router.get("/eee/{count:\\d{4}}/", callback);
         avalon.router.get("/fff", callback);
         avalon.router.get("/templates/tools/showSources",gopage);
+        avalon.router.get("/templates/tools/test",gopage);
         avalon.router.get("/templates/tools/register",gopage);
         avalon.router.get("/templates/tools/article_detail",gopage);
         avalon.router.get("/templates/tools/searchBlock",gopage);
